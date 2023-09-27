@@ -70,6 +70,13 @@ a {
 	text-decoration: none;
 }
 
+
+
+
+
+
+
+
 /* flex */
 
 .container {
@@ -168,7 +175,8 @@ header {
 .separate-block_differences {
 	background-color: #E0FBFC;
 	flex-grow: 1;
-	
+	flex-basis: calc(100% / 2); 
+	flex-grow: 1;
 }
 
 .separate-block_advantages {
@@ -177,11 +185,14 @@ header {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-basis: calc(100% / 2);
 	flex-grow: 1;
 }
 
 .separate-block_code-snippet {
 	background-color: #293241;
+	width: 90%;
+	margin: 1rem;
 }
 
 nav a {
@@ -206,7 +217,6 @@ a:hover {
 
 .separate-block_ascii-illustration {
 	font-family: monospace;
-	margin-bottom: 1rem;
 	background-color: #FFFFFF;
 	display: flex;
 	flex-wrap: wrap;
@@ -284,8 +294,103 @@ code:before {
 }
 
 
-@media (max-width: 768px) {
-    .site-menu {
+
+.snowboard-sizes {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(200px, 1fr));
+	gap: 0.6rem;
+	margin: 1rem;
+  }
+  
+  .row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: #f2f2f2;
+	padding: 0.6rem;
+	
+	transition: box-shadow 0.3s;
+  }
+  
+  .header {
+	font-weight: bold;
+  }
+  
+  .odd {
+	background-color: #fff;
+  }
+  
+  .even {
+	background-color: #f9f9f9;
+  }
+  
+  .cell {
+	text-align: center;
+	width: auto;
+  }
+
+  .row:hover {
+	box-shadow: 0.5rem 0.6rem 0.3rem 0.125rem rgba(0, 0, 255, .2);
+}
+  
+
+
+/* Высокое разрешение */ 
+@media screen and (min-width: 1201px) {
+	body {
+		font-size: 17px;
+	}
+}
+
+/* Небольшие ноутбуки */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+	body {
+		font-size: 10px;
+	}
+	.container {
+		margin: 0 auto;
+	}
+}
+  
+/* Телефоны */
+@media screen and (max-width: 768px) {
+	.site-menu {
         display: none;
     }
+	body {
+		font-size: 10px;
+	}
+	.separate-block {
+		margin: 1rem;
+	}
+
+	.container {
+		margin: 0;
+	}
+
+	.container_row {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.container_header {
+		margin: 0;
+	}
+
+	code {
+		font-size: 50;
+	}
+
+	.separate-block_code-snippet {
+		width: 90%
+	}
+
+	.container_col {
+		min-height: auto;
+	}
+
+	footer .container_row {
+		align-content: space-between;
+		align-items:normal;
+		justify-content: space-between;
+	}
 }
