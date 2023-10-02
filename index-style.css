@@ -283,7 +283,7 @@ code:before {
 }
 
 
-
+/* Таблица ростовок */
 .snowboard-sizes {
 	display: grid;
 	grid-template-columns: repeat(1, minmax(200px, 1fr));
@@ -296,20 +296,16 @@ code:before {
 	grid-template-columns: repeat(3, 1fr);
 	background-color: #f2f2f2;
 	padding: 0.6rem;
-	
+	background-color: #fff;
 	transition: box-shadow 0.3s;
+  } 
+  
+  .snowboard-sizes>.row:nth-child(even) {
+	background-color: #f9f9f9;
   }
   
   .header {
 	font-weight: bold;
-  }
-  
-  .odd {
-	background-color: #fff;
-  }
-  
-  .even {
-	background-color: #f9f9f9;
   }
   
   .cell {
