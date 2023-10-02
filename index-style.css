@@ -70,23 +70,12 @@ a {
 	text-decoration: none;
 }
 
-
-
-
-
-
-
-
 /* flex */
 
 .container {
 	display: flex;
 }
 
-/*.container_header {
-	flex-direction: row;
-	justify-content: left;
-}*/
 
 .container_row {
 	flex-direction: row;
