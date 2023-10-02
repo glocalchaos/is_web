@@ -299,7 +299,7 @@ code:before {
 	background-color: #fff;
 	transition: box-shadow 0.3s;
   } 
-  
+
   .snowboard-sizes>.row:nth-child(even) {
 	background-color: #f9f9f9;
   }
@@ -341,11 +341,12 @@ code:before {
 	.site-menu {
         display: none;
     }
+
 	body {
 		font-size: 10px;
 	}
 	.separate-block {
-		margin: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.container {
@@ -366,7 +367,7 @@ code:before {
 	}
 
 	.separate-block_code-snippet {
-		width: 90%
+		width: 90%;
 	}
 
 	.container_col {
@@ -377,5 +378,18 @@ code:before {
 		align-content: space-between;
 		align-items:normal;
 		justify-content: space-between;
+	}
+
+	.container_row footer {
+		flex-direction: row;
+	}
+
+	.clue .clue-text {
+		z-index: 1;
+	
+		margin-left: 3rem;
+
+		top: -0.4rem;
+    	left: 0%;
 	}
 }
