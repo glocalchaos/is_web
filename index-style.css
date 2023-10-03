@@ -87,7 +87,7 @@ a {
 	align-items: center;
 	justify-content: space-evenly;
 	min-height: 100vh;
-	min-width: none;
+	min-width: 0;
 }
 
 .container_aside {
@@ -346,9 +346,6 @@ code:before {
         display: none;
     }
 
-	.separate-block .separate-block_code-snippet {
-		max-width: 0;
-	}
 
 	body {
 		font-size: 10px;
@@ -398,10 +395,6 @@ code:before {
 
 		top: -0.4rem;
     	left: 0%;
-	}
-
-	.container_col {
-		min-width:0;
 	}
 
 	.separate-block_advantages {
