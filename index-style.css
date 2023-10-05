@@ -90,12 +90,24 @@ a {
 	min-width: 0;
 }
 
+.site-menu {
+	justify-content: space-evenly;
+	min-width: fit-content;
+	overflow-y: auto;
+}
 .container_aside {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 
-	min-height: 100vh;
+	height: 100vh;
+
+	display: flex;
+	position: -webkit-sticky; /* for Safari users */
+	position: sticky;
+
+	top: 0;
+	align-self: flex-start;
 }
 
 .container_header {
@@ -202,6 +214,12 @@ nav a {
 	vertical-align: baseline;
 	color: #FFFFFF;
 	min-width:fit-content;
+}
+
+.site-menu a .active {
+	font-variant: small-caps;
+	border: #FFFFFF;
+	border-width: 1;
 }
 
 a:hover {
