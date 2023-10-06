@@ -216,11 +216,13 @@ nav a {
 	min-width:fit-content;
 }
 
-.site-menu a .active {
-	font-variant: small-caps;
-	border: #FFFFFF;
-	border-width: 1;
+.active {
+	font-weight: bold;
+	text-decoration: underline;
+	border: 0.2rem solid #E9E9EB;
+	text-transform: uppercase;
 }
+
 
 a:hover {
 	text-decoration: underline;
