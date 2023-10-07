@@ -177,8 +177,7 @@ header {
 .separate-block_differences {
 	background-color: #E0FBFC;
 	flex-grow: 1;
-	flex-basis: calc(100% / 2); 
-	flex-grow: 1;
+	flex-basis: calc(100% / 2);
 }
 
 .separate-block_advantages {
@@ -352,6 +351,8 @@ code:before {
 
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
+	
+	width: 95vh;
 }
   
 .header {
@@ -381,6 +382,7 @@ code:before {
 .separate-block_item img {
 	width: 100%;
 	max-width: 10rem;
+	max-height: 15rem;
 /*aspect-ratio: 2 / 3 auto;*/
 
 
@@ -392,7 +394,11 @@ code:before {
 
 
 
-
+.separate-block_media {
+	background-color: #ffffff;
+	flex-grow: 1;
+	flex-basis: 100%;
+}
 
 
 
