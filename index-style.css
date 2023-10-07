@@ -352,7 +352,9 @@ code:before {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	
-	width: 95vh;
+	/* width: 95vh; */
+	flex-grow: 1;
+	flex-basis: calc(100% / 2);
 }
   
 .header {
@@ -387,6 +389,13 @@ code:before {
 
 
 	border-radius: 1rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: col;
+	justify-items: center;
+	align-items: center;
+	align-content: space-around;
 }
 
 
