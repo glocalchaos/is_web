@@ -76,6 +76,11 @@ a {
 	display: flex;
 }
 
+.site-menu .container {
+	flex-grow: 1; 
+	flex-basis: 3%;
+}
+
 
 .container_row {
 	flex-direction: row;
@@ -364,6 +369,11 @@ code:before {
 .item-cell {
 	text-align: center;
 	width: auto;
+}
+
+.container_col_main {
+	flex-grow: 1; 
+	flex-basis: 100%;
 }
 
 

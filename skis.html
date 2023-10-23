@@ -14,7 +14,6 @@
     <script src="js/active-site-menu-item.js"></script>
 </head>
 
-<body class="container container_row">
     <body class="container container_row">
         <div class="site-menu container">
             <nav class="container container_aside">
@@ -82,7 +81,7 @@
             </nav>
         </div>
     
-        <div class="container container_col">
+        <div class="container container_col container_col_main">
     
             <div class="container_header">
                 <header>
@@ -90,9 +89,11 @@
                 </header>
             </div>
     
-            <main class="container container_col" style="width: 100%;">
+            <main class="container container_col">
                 
-                <div class="items-list">
+                
+                <div class="items-list" style="flex-grow: 1; flex-basis:100%;">
+                <div class="container container_col" style="flex-grow: 1; flex-basis: calc(100% / 2);  margin: 2rem">
 
                     <div class="item-cell">
                         <div class="separate-block separate-block_item">
@@ -109,7 +110,8 @@
                             <p>Description</p>
                         </div>
                     </div>
-
+                </div>
+                <div class="container container_col"  style="flex-grow: 1; flex-basis: calc(100% / 2);  margin: 2rem">
                     <div class="item-cell">
                         <div class="separate-block separate-block_item">
                             <img src="https://glisshop-glisshop-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/735/735/217a7739743199a101bc77a83644c83f39d3a8fb_H23SALOSKI342419_0.jpeg">
@@ -125,9 +127,9 @@
                             <p>Description</p>
                         </div>
                     </div>
+                </div>
 
-
-
+                <div class="container container_col"  style="flex-grow: 1; flex-basis: calc(100% / 2);  margin: 2rem">
                     <div class="item-cell">
                         <div class="separate-block separate-block_item">
                             <img src="https://glisshop-glisshop-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/735/735/91ffd5f707b581c363271d4f40881c7c2b6de8dc_H22ROSSSKI178385_0.jpeg">
@@ -143,7 +145,8 @@
                             <p>Description</p>
                         </div>
                     </div>
-
+                </div>
+                <div class="container container_col"  style="flex-grow: 1; flex-basis: calc(100% / 2); margin: 3rem">
                     <div class="item-cell">
                         <div class="separate-block separate-block_item">
                             <img src="https://glisshop-glisshop-fr-storage.omn.proximis.com/Imagestorage/imagesSynchro/735/735/217a7739743199a101bc77a83644c83f39d3a8fb_H23SALOSKI342419_0.jpeg">
@@ -159,7 +162,7 @@
                             <p>Description</p>
                         </div>
                     </div>
-
+                </div>
 
                 </div>
 
@@ -174,6 +177,6 @@
             </footer>
         </div>
     </body>
-</body>
+
 
 </html>
