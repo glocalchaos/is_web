@@ -222,7 +222,6 @@ nav a {
 
 .active {
 	font-weight: bold;
-	text-decoration: underline;
 	border: 0.2rem solid #E9E9EB;
 	text-transform: uppercase;
 }
@@ -355,7 +354,7 @@ code:before {
 	margin: 1rem;
 
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	
 	/* width: 95vh; */
 	flex-grow: 1;
@@ -369,6 +368,7 @@ code:before {
 .item-cell {
 	text-align: center;
 	width: auto;
+	margin: 1rem;
 }
 
 .container_col_main {
