@@ -118,8 +118,19 @@ a {
 .container_header {
 	margin: 0 auto;
 	min-width: 100%;
+	flex-direction: row;
 }
 
+.container_header header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 180%;
+}
 
 .separate-block {
 	border-radius: 2rem;
@@ -154,6 +165,7 @@ ul li:before {
 footer {
 	font-variant: small-caps;
 	
+	width:100%;
 	font-size: 80%;
 }
 
@@ -167,7 +179,7 @@ header {
 	padding: 0.7rem;
 	text-align: left;
 
-	
+	flex-direction: row;
 	justify-content: left;
 
 	flex-basis: 0;
@@ -515,4 +527,36 @@ code:before {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(4, 1fr);
 	}
+}
+
+.button #button_nightModeToggle {
+	position: relative;
+	top: 20rem;
+	left: 100rem;
+}
+
+.container_header .night-mode {
+	background-color: #293241;
+	color:white
+}
+.site-menu .night-mode {
+	background-color: #293241;
+}
+.site-menu .container .night-mode {
+	background-color: #293241;
+}
+nav .night-mode {
+	background-color: #293241;
+}
+body .night-mode {
+	background-color: #364154;
+}
+
+footer a .night-mode {
+	color: white;
+}
+
+.separate-block_description .night-mode {
+	color: white;
+	background-color: #364154;
 }

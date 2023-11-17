@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="index-style.css">
     <script src="js/loading-speed.js"></script>
     <script src="js/active-site-menu-item.js"></script>
+    <script src="js/night-mode-toggle.js"></script>
 </head>
 
 <body class="container container_row">
@@ -79,7 +80,7 @@
                     <path
                         d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
                 </svg>
-                Акции</a>
+                Акции</a> 
         </nav>
     </div>
 
@@ -87,10 +88,10 @@
 
         <div class="container_header">
             <header>
-                <h1>О нас</h1>
-            </header>
+                <h1>О нас</h1>  
+                <button id="button_nightModeToggle" onclick=nightModeToggle()>☼/☾</button>  
+            </header> 
         </div>
-
         <main class="container container_col">
             <div class="container container_row">
                 <div class="container container_col">
@@ -207,7 +208,7 @@
             </div>
         </main>
 
-        <footer class="container container_row">
+        <footer class="container container_row"> 
             <a href="mailto:this@perkv.ru?subject=Powdershop&body=Message">this@perkv.ru</a>
             <a
                 href="https://www.google.com/maps/place/39%C2%B002'02.0%22N+125%C2%B045'14.4%22E/@39.0338533,125.7512286,16.71z/data=!4m4!3m3!8m2!3d39.0339!4d125.754?entry=ttu">39,0339°N,
@@ -216,5 +217,4 @@
         </footer>
     </div>
 </body>
-
 </html>
