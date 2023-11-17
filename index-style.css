@@ -529,6 +529,10 @@ code:before {
 	}
 }
 
+main {
+	width: 100%;
+}
+
 .button #button_nightModeToggle {
 	position: relative;
 	top: 20rem;
@@ -558,5 +562,8 @@ footer a .night-mode {
 
 .separate-block_description .night-mode {
 	color: white;
+	background-color: #364154;
+}
+main .night-mode {
 	background-color: #364154;
 }

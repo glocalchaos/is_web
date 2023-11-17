@@ -1,5 +1,5 @@
 function nightModeToggle() {
-    const elements = document.querySelectorAll("footer a, nav, .site-menu, .container_header, header, main, footer, article");
+    const elements = document.querySelectorAll("footer a, nav, .site-menu, .container_header, header, main, footer, article, main");
     console.log(elements)
     //element.classList.toggle("night-mode");
     elements.forEach((element) => {
