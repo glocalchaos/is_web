@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let menuLinks = Array.from(
         document.querySelectorAll('.site-menu-item')
     );
-
-    // console.log("чё смотришь " + document.location.pathname + " " + menuLinks.length)
     
     menuLinks.forEach(link => {
-        let linkHref = link.getAttribute("href").split("/").reverse()[0];
+        let linkHref = link.getAttribute("href").split("/").at(-1);
 
                     // console.log(link);
 

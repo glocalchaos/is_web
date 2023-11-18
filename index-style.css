@@ -533,6 +533,12 @@ main {
 	width: 100%;
 }
 
+.separate-block_promo {
+	background-color: #E0FBFC;
+	flex-grow: 1;
+	flex-basis: calc(100% / 2);
+}
+
 .button #button_nightModeToggle {
 	position: relative;
 	top: 20rem;
