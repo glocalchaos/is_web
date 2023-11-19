@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="discount-table-style.css">
     <script src="js/loading-speed.js"></script>
     <script src="js/active-site-menu-item.js"></script>
     <script src="js/night-mode-toggle.js"></script>
-    <script src="js/promo-generator.js"></script>
+    <script type="module" src="js/table-generator.js"></script>
+    <script type="module" src="js/promo-generator.js"></script>
 </head>
 
     <body class="container container_row">
@@ -98,48 +100,71 @@
 
                     <div class="separate-block separate-block_promo">
                         <h2>Акция для новичков</h2>
-                        <p>Выбери вид спорта, свой уровень и параметры и получи скидку 15% на 2 категории</p>
+                        <p>Выбери вид спорта, свой уровень и параметры и получи скидку до 30% на доступные категории</p>
+                        <pre>
+
+           ,                      /\.__      _.-\
+          /~\,      __       /~    \   ./    \
+        ,/  /_\   _/  \    ,/~,_.~'"\ /_\_  /'\
+       / \ /## \ / V#\/\  /~8#  # ## V8  #\/8 8\
+     /~#'#"#""##V&#&# ##\/88#"#8# #" #\#&"##" ##\
+    j# ##### #"#\&&"####/###&  #"#&## #&" #"#&#"#'\
+   /#"#"#####"###'\&##"/&#"####"### # #&#&##"#"### \
+  J#"###"#"#"#"####'\# #"##"#"##"#"#####&"## "#"&"##|\
+                        </pre>
                     </div>
 
-                <div class="container container_column">
+                <div class="container container_column" style="width:80%">
                 <div class="separate-block separate-block_form">
                     
                     <form id="get-discount">
                     <h2>Оформление скидки</h2>
                     <h3>Вид спорта</h3>
-                    <input type="radio" 
+                    
+                    <label>
+                        <input type="radio" 
                            name="sports" 
-                           value="Snowboard" 
+                           value="snowboard" 
                            checked 
                            title="Сноуборд">
-                    <label>Сноуборд</label>
-                    <input type="radio" 
+                           Сноуборд
+                    </label>
+                    
+                    <label>
+                        <input type="radio" 
                            name="sports" 
-                           value="Ski"
+                           value="ski"
                            title="Лыжи">
-                    <label>Лыжи</label>
+                        Лыжи
+                    </label>
 
                     <h3>Уровень</h3>
-                    <input type="radio" 
+                    <label>
+                        <input type="radio" 
                            name="level" 
                            value="Junior" 
                            checked
                            title="Junior">
-                    <label>Начинающий</label>
-                    <input type="radio" 
+                        Начинающий</label>
+                    <label>
+                        <input type="radio" 
                            name="level" 
                            value="Middle"
                            title="Middle">
-                    <label>Продвинутый</label>
-                    <input type="radio" 
-                           name="level" 
-                           value="Senior"
-                           title="Senior">
-                    <label>Профессионал</label>
+                        Продвинутый</label>
+                    <label>
+                        <input type="radio" 
+                               name="level" 
+                               value="Senior"
+                               title="Senior">
+                        Профессионал</label>
 
                     <h3>Рост/вес</h3>
                     <input type="number" min="140" max="200" name="height" required><span> /</span>
                     <input type="number" min="40" max="130" name="weight" required>
+
+                    <h3>Сколько категорий со скидкой вы хотите?</h3>
+                    <input type="number" min="1" max="6" name="discountNumber" required>
 
                     <input type="submit" value="Получить скидку" id="discount-results">
                     </form>
