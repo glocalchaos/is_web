@@ -8,16 +8,17 @@ function nightModeToggle() {
         }
       });
 
-    if (nightMode) {
-        localStorage.setItem("nightMode", false);
+    if (localStorage.getItem("nightMode") == "true") {
+        localStorage.setItem("nightMode", "false");
     }
-    else if ((!nightMode) || (nightMode == null)) {
-      localStorage.setItem("nightMode", true);
+    else if ((localStorage.getItem("nightMode") == "false") || (localStorage.getItem("nightMode") == null)) {
+      localStorage.setItem("nightMode", "true");
     }
 }
 
-var nightMode = localStorage.getItem("nightMode");
-
-if (nightMode) {
-    nightModeToggle();
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var nightMode = localStorage.getItem("nightMode");
+    if (nightMode == "true") {
+        nightModeToggle();
+    }
+})
