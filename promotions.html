@@ -13,6 +13,7 @@
     <script src="js/loading-speed.js"></script>
     <script src="js/active-site-menu-item.js"></script>
     <script src="js/night-mode-toggle.js"></script>
+    <script src="js/promo-generator.js"></script>
 </head>
 
     <body class="container container_row">
@@ -94,11 +95,55 @@
     
             <main class="container container_col">
                 <div class="container container_row">
-                <div class="separate-block separate-block_media">
 
-                    <h2>К сожалению, промиков пока нет...</h2>
-                    <p>... зато пока вы можете посмотреть этот видос</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UPqDWj-RxV8?si=ZFmOeErdIsPquNGD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="separate-block separate-block_promo">
+                        <h2>Акция для новичков</h2>
+                        <p>Выбери вид спорта, свой уровень и параметры и получи скидку 15% на 2 категории</p>
+                    </div>
+
+                <div class="container container_column">
+                <div class="separate-block separate-block_form">
+                    
+                    <form id="get-discount">
+                    <h2>Оформление скидки</h2>
+                    <h3>Вид спорта</h3>
+                    <input type="radio" 
+                           name="sports" 
+                           value="Snowboard" 
+                           checked 
+                           title="Сноуборд">
+                    <label>Сноуборд</label>
+                    <input type="radio" 
+                           name="sports" 
+                           value="Ski"
+                           title="Лыжи">
+                    <label>Лыжи</label>
+
+                    <h3>Уровень</h3>
+                    <input type="radio" 
+                           name="level" 
+                           value="Junior" 
+                           checked
+                           title="Junior">
+                    <label>Начинающий</label>
+                    <input type="radio" 
+                           name="level" 
+                           value="Middle"
+                           title="Middle">
+                    <label>Продвинутый</label>
+                    <input type="radio" 
+                           name="level" 
+                           value="Senior"
+                           title="Senior">
+                    <label>Профессионал</label>
+
+                    <h3>Рост/вес</h3>
+                    <input type="number" min="140" max="200" name="height" required><span> /</span>
+                    <input type="number" min="40" max="130" name="weight" required>
+
+                    <input type="submit" value="Получить скидку" id="discount-results">
+                    </form>
+                </div>
                 </div>
                 </div>
             </main>

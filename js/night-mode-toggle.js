@@ -7,4 +7,17 @@ function nightModeToggle() {
           element.classList.toggle('night-mode');
         }
       });
+
+    if (nightMode) {
+        localStorage.setItem("nightMode", false);
+    }
+    else if ((!nightMode) || (nightMode == null)) {
+      localStorage.setItem("nightMode", true);
+    }
+}
+
+var nightMode = localStorage.getItem("nightMode");
+
+if (nightMode) {
+    nightModeToggle();
 }
