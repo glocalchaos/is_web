@@ -30,9 +30,20 @@ function addCommentsButton(shopItem) {
 function revealComments() {
     document.querySelector(".pop-up-window_comments").classList.toggle('active');
     
-    
+    loadComments();
 }
 
 function hideComments() {
     document.querySelector(".pop-up-window_comments").classList.toggle('active');
+}
+
+function loadComments() {
+    let randomComments;
+    fetch('https://jsonplaceholder.typicode.com/comments').then((response) => response.json())
+    .then(data => {
+        randomComments = data.sort(() => 0.5 - Math.random()).slice(0, 15)
+    }).catch(error => console.error(error));
+    randomComments.forEach(comment => {
+            console.log(comment);
+    });
 }

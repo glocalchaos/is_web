@@ -12,8 +12,8 @@
 	margin: 1rem;
 	padding: 1rem;
     position: fixed;
-    left: 50%;
-    bottom: 50%;
+    left: 40%;
+    bottom: 25%;
 
     transition: opacity 0.5s;
 }
@@ -25,4 +25,8 @@
 
 .pop-up-window_comments {
     background-color: #ffffff;
+}
+
+.preloader {
+    width: 15rem;
 }
