@@ -8,17 +8,28 @@ function nightModeToggle() {
         }
       });
 
-    if (localStorage.getItem("nightMode") == "true") {
-        localStorage.setItem("nightMode", "false");
+    if (getState() == "true") {
+        saveState("false");
     }
-    else if ((localStorage.getItem("nightMode") == "false") || (localStorage.getItem("nightMode") == null)) {
-      localStorage.setItem("nightMode", "true");
+    else if ((getState == "false") || (getState() == null)) {
+      saveState("true");
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var nightMode = localStorage.getItem("nightMode");
-    if (nightMode == "true") {
+    if (getState() == "true") {
         nightModeToggle();
     }
 })
+
+function saveState(isOn) {
+    var data = {
+      isOn: isOn 
+    };
+
+    localStorage.setItem("nightMode", JSON.stringify(data));
+}
+
+function getState() {
+    return JSON.parse(localStorage.getItem("nightMode"))["isOn"]
+}
