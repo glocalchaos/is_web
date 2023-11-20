@@ -267,6 +267,9 @@ a:hover {
 	counter-reset: line;
 	color: #FFFFFF;
 }
+pre {
+	font-size: 1vw;
+}
 
 code {
 	counter-increment: line;
@@ -433,6 +436,8 @@ code:before {
 	background-color: #ffffff;
 	flex-grow: 1;
 	flex-basis: 100%;
+	width: 90%;
+	height: fit-content;
 }
 
 

@@ -1,6 +1,6 @@
 function nightModeToggle() {
     const elements = document.querySelectorAll("footer a, nav, .site-menu, .container_header, header, main, footer, article, main");
-    console.log(elements)
+
     //element.classList.toggle("night-mode");
     elements.forEach((element) => {
         if (!element.classList.contains("separate-block")) {
@@ -8,16 +8,28 @@ function nightModeToggle() {
         }
       });
 
-    if (nightMode) {
-        localStorage.setItem("nightMode", false);
+    if (getState() == "true") {
+        saveState("false");
     }
-    else if ((!nightMode) || (nightMode == null)) {
-      localStorage.setItem("nightMode", true);
+    else if ((getState == "false") || (getState() == null)) {
+      saveState("true");
     }
 }
 
-var nightMode = localStorage.getItem("nightMode");
+document.addEventListener("DOMContentLoaded", function() {
+    if (getState() == "true") {
+        nightModeToggle();
+    }
+})
 
-if (nightMode) {
-    nightModeToggle();
+function saveState(isOn) {
+    var data = {
+      isOn: isOn 
+    };
+
+    localStorage.setItem("nightMode", JSON.stringify(data));
+}
+
+function getState() {
+    return JSON.parse(localStorage.getItem("nightMode"))["isOn"]
 }
