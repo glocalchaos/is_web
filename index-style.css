@@ -578,3 +578,18 @@ footer a .night-mode {
 main .night-mode {
 	background-color: #364154;
 }
+
+/* Кастомные комментарии и фон для highlight.js */
+
+pre code {
+	background: #293241 !important; /* Cпечифичность импортированных css правил будет выше */
+}
+.hjls {
+	color: #293241 !important;
+}
+
+.hljs-comment, 
+.hljs-quote {
+	color:#7ED957 !important;
+	font-style: italic !important;
+}

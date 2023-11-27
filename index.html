@@ -15,6 +15,17 @@
     <script src="js/loading-speed.js"></script>
     <script src="js/active-site-menu-item.js"></script>
     <script src="js/night-mode-toggle.js"></script>
+
+    <!-- Highlight.js для блока кода на главной странице -->
+    <!-- Импортируем css правила для темы подсветки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/synth-midnight-terminal-dark.css">
+    <!-- Скрипт highlight.js, добавляющий классы -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Язык java -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <!-- Запуск скрипта -->
+    <script>hljs.highlightAll();</script>
+
 </head>
 
 <body class="container container_row">
@@ -126,12 +137,12 @@
 
                     <div class="container container_row">
                     <div class="separate-block separate-block_code-snippet">
-                        <pre><code><span class="separate-block_code-snippet__comment">// Памятка: как спускаться по чёрным</span></code>
-<code>public void runBlackDiamond() {</code>
-<code>    while (!rider.hasCaughtEdge) {</code>
-<code>        rider.rideNormally;</code>
-<code>    }</code>
-<code>}</code></pre>
+                        <pre><code class="language-java"><span class="separate-block_code-snippet__comment">// Памятка: как спускаться по чёрным</span></code>
+<code class="language-java">public void runBlackDiamond() {</code>
+<code class="language-java">    while (!rider.hasCaughtEdge) {</code>
+<code class="language-java">        rider.rideNormally;</code>
+<code class="language-java">    }</code>
+<code class="language-java">}</code></pre>
                     </div>
                     </div>
                 </div>
