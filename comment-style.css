@@ -50,6 +50,13 @@
 .comment-element {
     font-variant: normal;
     width: 100%;
+    outline-style: solid;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    outline-width: 1px;
+    outline-color: #3d5a8048;
 }
 
 .commenter-name {
@@ -66,5 +73,4 @@
     display:inline-block;
     font-size: 100%;
     width: 100%;
-    margin-bottom: 0.5rem;
 }
