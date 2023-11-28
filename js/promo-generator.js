@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var height = document.querySelector('input[name="height"]').value;
     var weight = document.querySelector('input[name="weight"]').value;
     var discountNumber = document.querySelector('input[name="discountNumber"]').value;
-  
+
     var data = {
       sportType: sportType,
       skillLevel: skillLevel,
@@ -29,12 +29,24 @@ document.addEventListener("DOMContentLoaded", function() {
       discountNumber: discountNumber
     };
   
+    if (!isVerified(data)) {
+      swal("Что-то пошло не так", "Вы ввели некорректные данные(", "error")
+      return;
+    }
+
     localStorage.setItem("formData", JSON.stringify(data));
 
     generateTable(data);
   });
 
 })
+
+function isVerified(data) {
+  if ((data.discountNumber > 6) || (data.discountNumber < 1)) {
+    return false;
+  }
+  return true;
+}
 
 
 function generateTable(data) {
