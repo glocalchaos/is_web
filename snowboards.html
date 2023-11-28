@@ -19,6 +19,9 @@
     <!-- Pace topbar -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/themes/red/pace-theme-minimal.css">
+
+    <!-- Swiper.js для рекламного баннера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 
@@ -99,7 +102,26 @@
             </div>
     
             <main class="container container_col">
-                
+
+                <!-- Рекламный баннер -->
+                <div class="container container_row" style="width: 100%; height:min-content;">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://www.tactics.com/a/eiry/r/210927-ride-brand-banner.jpg"
+                        style="object-position: center;">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://www.tactics.com/a/ej3a/r/220930-gnu-brand-banner-m.jpg"
+                        style="object-position: center;">
+                    </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                </div>
+
                 <div class="items-list">
 
                     <div class="item-cell">
@@ -181,6 +203,25 @@
                 <a href="tel:+78005553535">8 (800) 555 35-35</a>
             </footer>
         </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+        </script>
+
     </body>
 
 
