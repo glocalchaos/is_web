@@ -21,6 +21,8 @@
     overflow-y:auto;
 
     transition: opacity 0.5s;
+
+    z-index: 3;
 }
 
 .pop-up-window.active {
