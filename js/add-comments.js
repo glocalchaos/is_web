@@ -29,7 +29,12 @@ function addCommentsButton(shopItem) {
 function revealComments() {
     document.querySelector(".pop-up-window_comments").classList.toggle('active');
     
-    loadComments();
+    try {
+        loadComments()
+    } catch (error) {
+        showErrorMessage();
+        console.log(error);
+    }
 }
 
 function hideComments() {
@@ -39,16 +44,25 @@ function hideComments() {
     cleanComments();
 }
 
-function loadComments() {
+// function loadComments() {
+async function loadComments() {
     showPreloader();
-    fetch('https://jsonplaceholder.typicode.com/comments').then((response) => response.json())
+    /*fetch('https://jsonplaceholder.typicode.com/comments').then((response) => response.json())
             .then(data => {
                 hidePreloader();
                 var randomComments = (data.sort(() => 0.5 - Math.random()).slice(0, 15));
                 for (i in randomComments) {
                     renderComment(randomComments[i]);
                 }
-    }).catch(error => {showErrorMessage(); console.log(error);})
+    }).catch(error => {showErrorMessage(); console.log(error);})*/
+    const responce = await fetch('https://jsonplaceholder.typicode.com/comments');
+    const comments = await responce.json().then(data => {
+        hidePreloader();
+        var randomComments = (data.sort(() => 0.5 - Math.random()).slice(0, 15));
+        for (i in randomComments) {
+            renderComment(randomComments[i]);
+        }
+    })
 }
 
 

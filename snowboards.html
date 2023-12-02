@@ -28,7 +28,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        window.onload = function() {
+        window.addEventListener("load", () => {
             var swiper = new Swiper(".mySwiper", {
                 pagination: {
                     el: ".swiper-pagination",
@@ -43,7 +43,7 @@
                     delay: 10000,
                 },
             });
-        }
+        }) 
         
     </script>
 
