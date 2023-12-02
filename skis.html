@@ -19,6 +19,9 @@
     <!-- Pace topbar -->
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/themes/red/pace-theme-minimal.css">
+
+    <!-- Swiper.js для рекламного баннера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 
@@ -99,6 +102,31 @@
             </div>
     
             <main class="container container_col">
+
+
+                <!-- Рекламный баннер -->
+                <div class="container container_row" style="width: 100%; height:min-content;">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="https://www.sport-bittl.com/en/tecnica/alpine-ski-boots/#navigation:attrib%5Bcat_url%5D%5B0%5D=%2Fen%2Ftecnica%2Falpine-ski-boots%2F&first=0&count=40">
+                            <img src="https://media1.sport-bittl.com/fileadmin/Daten/manufacturers/S-Z/Tecnica/Tecnica_Brand_Store_Banner_1200x400_2209127.jpg?width=1128"
+                            style="object-position: center;">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://alpineskishop.com/salomon-skis/">
+                            <img src="https://alpineskishop.com/product_images/uploaded_images/salomon-skis.jpg"
+                            style="object-position: center;">
+                            </a>
+                        </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    </div>
+
                 
                 <div class="items-list">
 
@@ -182,6 +210,25 @@
             </footer>
         </div>
     </body>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
 
 
     <!-- comments pop-up-->
