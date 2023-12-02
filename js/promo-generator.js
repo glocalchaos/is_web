@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   form["height"].value = JSON.parse(localStorage.getItem("formData"))["height"]
   form["weight"].value = JSON.parse(localStorage.getItem("formData"))["weight"]
   form["discountNumber"].value = JSON.parse(localStorage.getItem("formData"))["discountNumber"]
-
+  generateOldTable()
   
   submitButton.addEventListener("click", function(event) {
     event.preventDefault();
@@ -62,7 +62,8 @@ function generateTable(data) {
   var resultsContainer = main.querySelector("#generated-results-container");
   
   var generatedData = getTable(data.sportType, data.skillLevel, data.height, data.weight, data.discountNumber);
-  console.log(generatedData);
+  //console.log(generatedData);
+  localStorage.setItem("tableData", JSON.stringify(generatedData));
   document.querySelector("#discount-table")?.remove()
 
   var table = document.createElement("div");
@@ -105,4 +106,63 @@ function generateTable(data) {
 
 
   resultsContainer.appendChild(table)
+}
+
+
+function generateOldTable() {
+  var generatedData = JSON.parse(localStorage.getItem("tableData"))
+  if (generatedData != null) {
+    var main = document.querySelector("main");
+
+  if (main.querySelector("#generated-results-container") == null) {
+    var tableContainer = document.createElement("div");
+    tableContainer.classList.add("separate-block", "separate-block_form");
+    tableContainer.setAttribute("id", "generated-results-container")
+    main.appendChild(tableContainer)
+  }
+
+  var resultsContainer = main.querySelector("#generated-results-container");
+  document.querySelector("#discount-table")?.remove()
+
+  var table = document.createElement("div");
+  table.setAttribute("id", "discount-table");
+
+  var rowHeader = document.createElement("div");
+  rowHeader.classList.add("row", "header");
+  var cell = document.createElement("div");
+  cell.classList.add("cell");
+  cell.appendChild(document.createTextNode("Категория"))
+  rowHeader.appendChild(cell);
+
+  var cell = document.createElement("div");
+  cell.classList.add("cell");
+  cell.appendChild(document.createTextNode("% скидки"))
+  rowHeader.appendChild(cell);
+
+  var cell = document.createElement("div");
+  cell.classList.add("cell");
+  cell.appendChild(document.createTextNode("На заметку"))
+  rowHeader.appendChild(cell);
+
+  table.appendChild(rowHeader);
+  table.classList.add("discounts-table");
+  for (var category in generatedData) {
+    console.log(category[0] + " category");
+    var row = document.createElement("div");
+    row.classList.add("row")
+    
+    for (var col in generatedData[category]) {
+      console.log(col);
+      var cell = document.createElement("div");
+      cell.classList.add("cell");
+      cell.appendChild(document.createTextNode(generatedData[category][col]))
+      row.appendChild(cell)
+    }
+
+    table.appendChild(row)
+  }
+
+
+  resultsContainer.appendChild(table)
+  }
 }
